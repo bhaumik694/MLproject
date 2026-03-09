@@ -1,38 +1,119 @@
-##Problem Statement
+🎯 Math Score Predictor
+Machine Learning Project for Predicting Student Academic Performance
 
-This project analyzes how a student's performance (test scores) is affected by several factors such as Gender, Ethnicity, Parental level of education, Lunch type, and Test preparation course.
-Using these features, the model predicts the math score of a student using machine learning regression algorithms.
+📌 Overview
 
-Dataset
+The Math Score Predictor is a machine learning project that predicts a student's math exam score based on demographic and academic factors.
+
+The project explores how different variables such as gender, parental education, lunch type, and test preparation influence student performance.
+
+Multiple regression models are trained and evaluated to determine the best predictive model.
+
+🧠 Problem Statement
+
+Educational institutions often analyze factors that affect student performance to improve academic outcomes.
+
+This project aims to predict math scores using machine learning by analyzing the following features:
+
+Gender
+Race / Ethnicity
+Parental level of education
+Lunch type
+Test preparation course
+Reading score
+Writing score
+
+The trained model can be used to estimate math performance based on these factors.
+
+📊 Dataset
 
 Source:
-https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
+🔗 https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetId=74977
 
-Dataset details:
-
-Rows: 1000
-
-Columns: 8
-
-##Features in the dataset:
-
+Dataset Characteristics
+Attribute	Value
+Number of Rows	1000
+Number of Columns	8
+Problem Type	Regression
+Dataset Features
 Feature	Description
-gender	Gender of the student
+gender	Student gender
 race_ethnicity	Ethnicity group
-parental_level_of_education	Parent's highest education
-lunch	Standard or free lunch
-test_preparation_course	Completed or none
+parental_level_of_education	Parent's highest education level
+lunch	Type of lunch (standard / free)
+test_preparation_course	Course completion status
 reading_score	Reading exam score
 writing_score	Writing exam score
 math_score	Target variable
-Project Workflow
+⚙️ Machine Learning Pipeline
 
-##Evaluation Metrics
+The project follows a structured ML pipeline:
 
-Model performance was evaluated using:
-Mean Absolute Error (MAE)
-Root Mean Squared Error (RMSE)
-R² Score
+Data Collection
+      ↓
+Data Preprocessing
+      ↓
+Feature Engineering
+      ↓
+Model Training
+      ↓
+Model Evaluation
+      ↓
+Best Model Selection
+🧹 Data Preprocessing
+Feature Selection
+
+Target Variable
+
+math_score
+
+Input Features
+
+gender
+race_ethnicity
+parental_level_of_education
+lunch
+test_preparation_course
+reading_score
+writing_score
+Encoding
+
+Categorical features are transformed using:
+
+OneHotEncoder
+Feature Scaling
+
+Numerical features are standardized using:
+
+StandardScaler
+Train-Test Split
+
+Dataset split configuration:
+
+Training Data: 80%
+Testing Data: 20%
+Random State: 42
+🤖 Machine Learning Models Used
+
+The following regression algorithms were trained and evaluated:
+
+Model	Description
+Linear Regression	Baseline regression model
+Ridge Regression	L2 regularized regression
+Lasso Regression	L1 regularized regression
+KNN Regressor	Distance-based regression
+Decision Tree Regressor	Tree-based model
+Random Forest Regressor	Ensemble tree model
+AdaBoost Regressor	Boosting algorithm
+XGBoost Regressor	Gradient boosting model
+CatBoost Regressor	Optimized gradient boosting
+📈 Model Evaluation Metrics
+
+Models were evaluated using:
+
+MAE — Mean Absolute Error
+RMSE — Root Mean Squared Error
+R² Score — Coefficient of determination
 
 Example evaluation function:
 
@@ -43,22 +124,42 @@ def evaluate_model(true, predicted):
     r2_square = r2_score(true, predicted)
     return mae, rmse, r2_square
 
-##Visualization
 
-The project includes visualizations such as:
-
-Actual vs Predicted score plots
-Regression analysis graphs
-These help evaluate how well the model predicts student performance.
-
-##Tech Stack
-
+🛠 Tech Stack
+Programming Language
 Python
+Libraries
 Pandas
 NumPy
 Matplotlib
 Seaborn
 Scikit-Learn
 XGBoost
-
 CatBoost
+
+📁 Project Structure
+Math-Score-Predictor
+│
+├── data/
+│   └── stud.csv
+│
+├── notebooks/
+│   └── MODEL_TRAINING.ipynb
+│
+├── src/
+│   └── training_pipeline.py
+│
+├── requirements.txt
+│
+└── README.md
+🚀 How to Run the Project
+1️⃣ Clone the repository
+git clone https://github.com/yourusername/math-score-predictor.git
+2️⃣ Install dependencies
+pip install -r requirements.txt
+3️⃣ Run the notebook
+jupyter notebook
+
+Open:
+
+MODEL_TRAINING.ipynb
