@@ -4,15 +4,12 @@ Machine Learning Project for Predicting Student Academic Performance
 📌 Overview
 
 The Math Score Predictor is a machine learning project that predicts a student's math exam score based on demographic and academic factors.
-
 The project explores how different variables such as gender, parental education, lunch type, and test preparation influence student performance.
-
 Multiple regression models are trained and evaluated to determine the best predictive model.
 
 🧠 Problem Statement
 
 Educational institutions often analyze factors that affect student performance to improve academic outcomes.
-
 This project aims to predict math scores using machine learning by analyzing the following features:
 
 Gender
@@ -60,39 +57,7 @@ Model Training
 Model Evaluation
       ↓
 Best Model Selection
-🧹 Data Preprocessing
-Feature Selection
 
-Target Variable
-
-math_score
-
-Input Features
-
-gender
-race_ethnicity
-parental_level_of_education
-lunch
-test_preparation_course
-reading_score
-writing_score
-Encoding
-
-Categorical features are transformed using:
-
-OneHotEncoder
-Feature Scaling
-
-Numerical features are standardized using:
-
-StandardScaler
-Train-Test Split
-
-Dataset split configuration:
-
-Training Data: 80%
-Testing Data: 20%
-Random State: 42
 🤖 Machine Learning Models Used
 
 The following regression algorithms were trained and evaluated:
@@ -152,14 +117,17 @@ Math-Score-Predictor
 ├── requirements.txt
 │
 └── README.md
+
 🚀 How to Run the Project
+
 1️⃣ Clone the repository
 git clone https://github.com/yourusername/math-score-predictor.git
+
 2️⃣ Install dependencies
 pip install -r requirements.txt
+
 3️⃣ Run the notebook
 jupyter notebook
 
 Open:
-
 MODEL_TRAINING.ipynb
