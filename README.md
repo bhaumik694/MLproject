@@ -121,7 +121,7 @@ Math-Score-Predictor
 🚀 How to Run the Project
 
 1️⃣ Clone the repository
-git clone https://github.com/yourusername/math-score-predictor.git
+git clone https://github.com/bhaumik694/MLproject.git
 
 2️⃣ Install dependencies
 pip install -r requirements.txt
